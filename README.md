@@ -156,34 +156,34 @@ Saída:
 ```
 ### Faça um algoritmo que receba um número e retorne se o número é primo ou não
 ```
-static bool isPrime(int number )
+static bool isPrimeNumber(int number)
 {
-    for (int i = 2; i < number; i++) 
+    if (number >= 2)
     {
-        if (number%i == 0){
-            return false;
+        for (int i = 2; i < number; i++)
+        {
+            if (number % i == 0)
+            {
+                return true;
+            }
         }
-
     }
-    
-    return true;   
+
+    return false;
 }
 static void Main(string[] args)
 {
     int a = 20;
     for (int i = 1; i < a; i++)
     {
-        if(isPrime(i))
-        {
-            Console.WriteLine("{0}  is a Prime number ", i);
-        }
-        else
+        if (isPrimeNumber(i))
         {
             Console.WriteLine("{0}  is not a Prime number ", i);
         }
-
-    }
-}
+        else
+        {
+            Console.WriteLine("{0}  is  a Prime number ", i);
+        }
 ```
 
 Saída:
